@@ -8,5 +8,7 @@ urlpatterns = [
     # GET /hello/
     path("", views.index, name="index"),
     # GET /hello/author
-    path("author/", views.author, name="author")
+    path("author/", views.author, name="author"),
+
+    path("<str:name>", views.greet, name="greet")
 ]
